@@ -1,0 +1,503 @@
+body {
+    margin: 0;          
+}
+
+.image-display { 
+    position: relative;   
+    margin:0; 
+    height: 7rem; 
+    background-color: lightgrey;    
+}
+
+
+/* Navbar and Navbar Items  */
+.navbar {    
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    margin-top: 0;
+    height: 7rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 8rem;     
+    background: white; 
+}
+
+.navbar > .list {
+    grid-column: 2;         
+    margin: auto;      
+}
+
+.nav-link {
+    font-weight: 400;
+    font-family:'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: rgb(110, 110, 110);  
+    text-decoration: none;
+    margin-left: 2px;
+    margin-right: -1px;
+}
+
+.nav-link:hover, .dropbtn:hover {    
+    color: black;     
+    cursor: pointer;   
+}
+
+.navbar > .logo {
+    grid-column: 1;     
+    margin:auto;   
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+li {    
+    display: inline;     
+    margin-right: 10px;      
+}
+
+.dropdown {    
+    display: inline;
+    overflow: hidden;        
+}
+
+.dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-weight: 400;
+    font-family:'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: rgb(110, 110, 110);    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;    
+    min-width: 160px;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.9;      
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgb(110, 110, 110);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover{    
+    color: black;    
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+    transform: translateX(85px)
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content { 
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-link, .overlay-dropbtn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: rgb(110, 110, 110);
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-link:hover {
+    color: #f1f1f1;
+}
+
+.overlay-dropdown a {    
+    float: none;
+    color: rgb(110, 110, 110);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+    
+.dropdown-content a:hover {    
+        color: black;    
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: red;
+}
+
+
+/* Body Wrapper and Items */
+
+.wrapper {    
+    display: grid;
+    width: 100%;
+    height:100vh;
+    grid-auto-columns: repeat(3, auto);       
+    margin-top: 0px;
+    margin-bottom: 0px;    
+}
+
+
+/* Row1 and Items */
+
+.row1 {    
+    grid-column: 1; 
+    height: 100%;  
+    width: 5vw;   
+    padding-left: 10px;       
+}
+
+
+/* Row2 and Items */
+
+.row2 {
+    grid-column: 2;
+    height: 100%; 
+    width: 60vw;
+    padding-left: 10px; 
+    margin-right: 5px;  
+    margin-top: 13vh;  
+}
+
+.row2 p {
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+
+
+/* Row3 and Items */
+.row3 {    
+    grid-column: 3; 
+    height: 100%;    
+    margin: 0;  
+    width: 20vw;     
+    padding-right: 2rem;
+    padding-top: 25px;            
+}
+
+.pics-selector {
+    display: flex;       
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-top: 20px;
+}
+
+.pics-selector img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 0px 3px;
+    width: 100%;
+    height: 125px;    
+}
+
+.pics-selector img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: 0.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ccc;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row3 .heading {
+    text-align: center;
+    height: 5%;
+    margin: 0; 
+    padding-bottom: 15px;   
+}
+
+.heading h1 {
+    font-family: 'Manrope', sans-serif;
+    color: rgb(110, 110, 110);
+}
+
+#email-form {    
+    display: grid;
+    height: 75%;
+    margin: 0;    
+    grid-template-rows: repeat(6, 16.66%);    
+}
+
+.container1 { 
+    grid-row: 1;        
+    display: grid;
+    grid-template-rows: 2;
+    width: 100%;
+    height: 100%;            
+}
+
+.sub-container1 {    
+    grid-column: 1;
+    grid-row: 1/2;    
+    display: block;  
+    height: 100%;
+    width: 100%;    
+}
+
+.sub-container1 input {    
+    width: 100%;
+    height: 50%;
+    padding-left:5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+
+.sub-container1 label {
+    margin-top: 20px;
+}
+
+.sub-container2 {       
+    grid-column: 2; 
+    grid-row: 1/2;   
+    display: block;
+    height: 100%;
+    width: 100%; 
+}
+
+.sub-container2 input {       
+    width: 100%;
+    height: 50%;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+
+.sub-container2 label {
+    margin-top: 20px;
+}
+
+.container2 {   
+    grid-row: 2;    
+    height: 3rem;
+}
+
+.container2 input {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 80%;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+
+.container3 {  
+    grid-row: 3;    
+    height: 3rem;
+}
+
+.container3 input {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 80%;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+
+.container4 {
+    grid-row: 4/5;
+    display: grid;    
+    grid-template-rows: 1;    
+    height: 100%;
+}
+
+.container4 textarea { 
+    grid-row: 1;   
+    height: 100%;
+    width: 100%;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: rgb(250, 250, 250);
+}
+
+.submit-button {
+    grid-row: 5;       
+    justify-self: center;   
+    align-self: center;      
+}
+
+.submit-button a {       
+    color: white;     
+    background-color: black;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.submit-button:hover {
+    opacity: 0.7;
+}
+
+
+/* Footer and Items */
+
+.footerdiv {
+    height: 20%;      
+}
+
+
+@media only screen and (max-width: 1000px) {   
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;   
+        height: 100%;              
+    }    
+    
+    .row3 {
+        height: 80vh;
+        width: 90%;
+        margin-left: 15px;        
+        align-self: center;
+    }
+    
+
+    .navbar .list {
+        display: None;
+    }
+
+    .hamburger {
+        grid-column: 4;
+        display: block;
+        justify-self: start;
+    }
+    
+    .row2 {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .row2 p {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    .footerdiv {
+        height: 10%;
+    }
+  
+}

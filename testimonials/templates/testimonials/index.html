@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Testimonials</title>   
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="{% static 'testimonials/css/styles.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Testimonials</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}
+    <div class='bodywrapper'>
+        <h2 class="client-testimonials">See What Our Clients Have Said About Us:</h2>
+        <div class="content-wrapper">
+            <div class='test1'>
+                <p>“Our project involved the construction of a new building and the complete renovation of an existing building – a $19MM project. Ron Ussery exhibited a high level of integrity, skill and professionalism. He ran an organized, safe and efficient job site, holding all other contractors to the same standards. He made the entire team successful and it was a great experience working with him!”</p>
+                <p>– Kelly Carney, VP, Human Resources and CAO, Delta Dental of Arkansas</p>
+            </div>
+            <div class='test2'>
+                <p>“I have known Ron Ussery for over 15 years and have had the opportunity to work with him on some exciting and challenging projects.  Ron is very knowledgeable with respect to all aspects of construction.  He was always organized, willing to take on new responsibilities and ready for a challenge.  He is an ambitious leader and a great team player. He is able to build key relationships, resolve complicated issues and keep projects on schedule and within budget limits.  He placed a high priority on developing a final product that exceeds the expectations of the customer.”</p>
+                <p>- Brian Cotton, PE, CHC, CHFM</p>
+            </div>
+            <div class='test3'>
+                <p>“I found Mr. Ussery to be professional and easy to work with through the entire project.  He was pro-active, always anticipating upcoming issues, quick to provide a solution and willing to go the extra step to ensure a smooth construction process.  He maintained a good attitude, always pleasant to work with and I found him to be honest and trustworthy.”</p>
+                <p>– Rick Sowell, President, Sowell Architects, Inc.</p>
+            </div>
+            <div class='test4'>
+                <p>“Ron Ussery is a leader of men and has built very large, complicated structures such as hospitals, data centers and office buildings, where the logistics are almost overwhelming.”  I have known and worked with Ron for more than 22 years.  He is high skilled, honest, hardworking and dedicated.  Ron has a long history of successful, high-quality projects with outstanding safety records that were completed on time, in budget and with great client satisfaction.”</p>
+                <p>– David Nabholz</p>            
+            </div>            
+        </div>
+    </div>
+    {% endblock content2 %}
+    <script>                
+    </script>
+</body>
+</html>

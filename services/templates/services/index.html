@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Lender Rep</title>    
+    <link rel="stylesheet" href="{% static 'services/css/styles.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Lender Representation</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}  
+    <div class="bodywrapper">
+        <p class="ptag">In order to assist lenders in determining overall project feasibility and progress, we evaluate and analyze contract documents and observe and measure project progress in order to determine:</p>
+        <ul class="ullist1">
+            <li class="newlistitems">The cost and constructability of the project.</li>
+            <li class="newlistitems">Accuracy and propriety of interim contract draw requests and back-up documentation.</li>
+            <li class="newlistitems">Overall review of adherence to plans, specifications, workmanship, and generally accepted industry standards.</li>
+            <li class="newlistitems">General quality assessment.</li>
+            <li class="newlistitems">Accuracy and propriety of change orders, RFIs and submittals.</li>
+            <li class="newlistitems">Adherence to construction schedule.</li>
+            <li class="newlistitems">Final payment and close-out review.</li>
+        </ul>
+        <p class="ptag">We manage the project from start to finish. Our experience in virtually every aspect of construction makes us an invaluable construction advisor.</p>
+    </div> 
+    {% endblock content2 %}
+</body>
+</html>

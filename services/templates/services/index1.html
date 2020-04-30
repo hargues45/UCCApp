@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Owner Rep</title>    
+    <link rel="stylesheet" href="{% static 'services/css/styles1.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Owner Representation</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}   
+    <div class="bodywrapper">
+        <p class="ptag">We work closely with prospective building owners and developers to create a seamless construction process from concept, land acquisition, and the selection of design professionals and contractors, through construction and close-out.  Our services include:</p>
+        <ul class="ullist1">
+            <li class="ullist1-item">Owner dialogue in order to ascertain needs, preliminary programming, and “best fit” analysis.</li>
+            <li class="ullist1-item">Assistance in determining property needs and (when applicable) assisting with the property acquisition piece.</li>
+            <li class="ullist1-item">Leading the efforts to narrow appropriate architectural firms, then providing the basis and matrix for the interviews and selection, as well as contract negotiations with that firm.</li>
+            <li class="ullist1-item">Working with the owner and architect to coordinate the architect’s programming component and schematic design potentially leading to:</li>
+            <ul class="ullist2">
+                <li class="ullist2-item">Leading the efforts to narrow appropriate contracting firms then providing the basis and matrix for interviews and selection, as well as contract negotiations with that firm.</li>
+                <li class="ullist2-item">Owner-related contract administration and liaison with the architect and contractor (or construction manager) during the course of construction and oversight of pay applications, change orders, and close-out documentation.</li>
+            </ul>
+        </ul>
+    </div> 
+    {% endblock content2 %}
+</body>
+</html>

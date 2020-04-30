@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Litigation Support</title>    
+    <link rel="stylesheet" href="{% static 'services/css/styles3.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Litigation Support</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %} 
+    <div class="bodywrapper">
+        <p class="ptag">In the event of a construction related dispute, we offer expert witness testimony relating to:</p>
+        <ul class="ullist1">
+            <li class="ullist1-item">Workmanship and quality.</li>
+            <li class="ullist1-item">Contract documents adherence and interpretation.</li>
+            <li class="ullist1-item">Construction codes.</li>
+            <li class="ullist1-item">Contracting.</li>
+            <li class="ullist1-item">Project costs analysis.</li>
+            <li class="ullist1-item">Industry standards.</li>
+            <li class="ullist1-item">Jobsite safety.  (OSHA, equipment utilization, and jobsite oversight responsibilities.)</li>            
+        </ul>
+        <p class="ptag1">For over 25 years, we’ve provided building construction litigation support for both owners and contractors and other related entities.</p>
+    </div>    
+    {% endblock content2 %}
+</body>
+</html>

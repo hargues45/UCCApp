@@ -1,0 +1,94 @@
+.new-image-wrapper {
+    position: relative;
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    background-image: url('../photos/building.jpeg');    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    justify-content: center;
+    align-items: top;
+
+}
+
+.greeting {    
+    position: absolute;
+    color: white;
+    font-size: 4rem; 
+    font-family:'Open Sans', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    padding-top: 30px;
+    cursor: default; 
+    opacity: 0;
+    animation: opacity1 1s ease-in forwards;        
+}
+
+@keyframes opacity1 {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.bodywrapper{    
+    margin-top: 35px;
+    margin-left: 35px;
+    height: 100%;  
+    width: 95%;  
+}
+
+.ptag, .ptag1 {
+    font-family: "Monolith", sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    letter-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 0;    
+    color: rgb(110, 110, 110)
+}
+
+.ullist1 {        
+    list-style: disc;
+    word-wrap: break-word;    
+    height: 50%;  
+    margin-bottom: 40px;  
+}
+
+.ullist1-item {   
+    display: block;  
+    font-family: "Monolith", sans-serif;
+    font-size: 16px;
+    line-height: 1.7em;    
+    letter-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(110, 110, 110)      
+}
+
+.ullist1-item::before {
+    content: '\2022';
+    color: rgb(110, 110, 110);
+    margin-left: -1em;
+    margin-right: 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .greeting {
+        font-size: 22px;
+        align-self: center;
+    }
+
+    .bodywrapper {
+        height: 100%;        
+    }  
+    
+    .ptag, .ptag1, .ullist1-item {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - About Us</title>    
+    <link rel="stylesheet" href="{% static 'aboutus/css/styles.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">About Us</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}
+    <div class="card1">
+        <div class="ronbevimage1">
+            <img class='images' src="{% static 'aboutus/photos/ronbev.jpg' %}" alt="">            
+        </div>        
+        <div class="card-content">
+            <p>We began our company after some life changes with our individual careers, when we realized we shared the essentials for providing great service – a strong work ethic, high quality work, honesty, integrity and above all, a Christian faith.  We have combined our strengths so we can overcome our individual weaknesses and provide our clients the best we have to offer.  We specialize in construction projects, representing the owner’s and financer’s interests, ensuring our clients are receiving the best product for their investment.  We have over 40 years of experience in the project and construction management industry, and we want to provide the very best experience for our clients during the building process.  Our hope is that our clients see something different in us, urging them to continue that professional relationship for many years. Let us show you what a difference we can make.</p>
+            <p>- Blessings,  Ron & Beverly Ussery</p>
+        </div>
+    </div>   
+    {% endblock content2 %}
+</body>
+</html>

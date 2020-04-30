@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Homepage</title>    
+    <link rel="stylesheet" href="{% static 'homepage/css/styles1.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Welcome</h1>
+    </div>     
+    {% endblock image %} 
+    {% block content %}
+    <div class="row1">            
+    </div>
+    {% endblock content %}
+    {% block content2 %}
+    <div class="row2">
+        <p class="content-p"><strong>Ussery Construction Consultants</strong> are professionals with over fifty years of experience in all phases of construction and project management.</p>
+    </br>
+        <p class="content-p">We combine hands-on knowledge and experience with scientific management techniques to assist both the owner and lender in minimizing risk.</p>
+    </div>     
+    {% endblock content2 %}
+</body>
+</html>

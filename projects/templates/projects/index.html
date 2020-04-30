@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Projects</title>    
+    <link rel="stylesheet" href="{% static 'projects/css/styles.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Projects</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}   
+    <div class="bodywrapper">  
+        <div class="slideshow-container">
+
+            <div class="mySlidesfade">
+              <div class="numbertext">1 / 4</div>
+              <img src="{% static '/projects/photos/image002.png' %}" style="width:100%">
+              <div class="text">UAMS - Mid Project</div>
+            </div>
+            
+            <div class="mySlidesfade">
+              <div class="numbertext">2 / 4</div>
+              <img src="{% static '/projects/photos/image007.jpg' %}" style="width:100%">
+              <div class="text">UAMS - Final</div>
+            </div>
+            
+            <div class="mySlidesfade">
+              <div class="numbertext">3 / 4</div>
+              <img src="{% static '/projects/photos/image008.jpg' %}" style="width:100%">
+              <div class="text">Conway Corp</div>
+            </div>
+
+            <div class="mySlidesfade">
+                <div class="numbertext">4 / 4</div>
+                <img src="{% static '/projects/photos/image006.jpg' %}" style="width:100%">
+                <div class="text">UAMS - Final</div>
+              </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>    
+
+        </div>      
+    
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlidesfade");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+        </script>
+    {% endblock content2 %}
+</body>
+</html>

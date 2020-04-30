@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Contact Us</title>    
+    <link rel="stylesheet" href="{% static 'contact/css/styles.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Contact Us</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %}   
+    <div class="bodywrapper">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.317034944368!2d-92.12531694977208!3d35.223477180206864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d25fbf2bdaf2f3%3A0x2a77e2d4273c6e3f!2s3%20Carmichael%20Rd%2C%20Mt%20Vernon%2C%20AR%2072111!5e0!3m2!1sen!2sus!4v1587957348929!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="bodycontent">
+            <h3 class="heading">Ussery Construction Consultants</h3>
+            <p class="address"><strong>Address:</strong>
+            </br>
+            3 Carmichael Road 
+            </br> 
+            Mount Vernon, AR 72111</p>
+            <p class="phones"><strong>Phone:</strong>
+            </br>
+                Ron: 501.231.1518
+            </br>    
+                Beverly: 501.339.0184
+            </p>
+            <p class="emails"><strong>Email:</strong>
+            </br>       
+                Bev@UCC.com
+            </br>
+                Ron@UCC.com
+            </br>
+                Accounting@UCC.com
+            </p>        
+        </div>
+    </div> 
+    {% endblock content2 %}
+</body>
+</html>

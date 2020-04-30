@@ -1,0 +1,167 @@
+
+{% load static %}
+
+<html lang='en'>
+<head>
+    {% block header %}
+    <title>UCC - Homepage</title>
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Open+Sans" rel="stylesheet">
+    <link rel='stylesheet' href="{% static 'css/base.css' %}" type"text/css">    
+</head>
+
+<body>
+    <div class='image-display'>               
+        <div class='navbar'>
+                <div class="logo">
+                    <img class='image1' src="{% static 'photos/400dpiLogo.png' %}" alt='' width=200px height=100px>                
+                </div>
+                <div class='list'>
+                    <ul>
+                        <li>
+                            <a class='nav-link' href='{% url "ucc-homepage" %}'>Home</a>
+                        </li>
+                        <li>
+                            <a class='nav-link' href='{% url "ucc-aboutus" %}'>About Us</a>
+                        </li>
+                        <li>
+                            <div class='dropdown'>                                
+                                <a class="dropbtn">Services</a>
+                                <div class="dropdown-content">
+                                    <a href="{% url 'ucc-services-lender' %}">Lender Representation</a>
+                                    <a href="{% url 'ucc-services-owner' %}">Owner Representation</a>
+                                    <a href="{% url 'ucc-services-building' %}">Building Condition Reports</a>
+                                    <a href="{% url 'ucc-services-litigation' %}">Litigation Support</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class='nav-link' href='#'>Current Projects</a>
+                        </li>
+                        <li>
+                            <a class='nav-link' href='{% url "ucc-testimonials" %}'>Testimonials</a>
+                        </li>
+                        <li>
+                            <a class='nav-link' href='{% url "ucc-contact" %}'>Contact</a>
+                        </li>
+                    </ul>                    
+                </div>
+                <div class="hamburger" onclick='openNav()'>
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id='myNav' class="overlay">
+                    <a href='javascript:void(0)' class='closebtn' onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a class='overlay-link' href='{% url "ucc-homepage" %}'>Home</a>
+                        <a class='overlay-link' href='{% url "ucc-aboutus" %}'>About Us</a>
+                        <div class='overlay-dropdown'>                                
+                            <a class="overlay-dropbtn">Services</a>
+                            <div class="overlay-dropdown-content">
+                                <a href="{% url 'ucc-services-lender' %}">Lender Representation</a>
+                                <a href="{% url 'ucc-services-owner' %}">Owner Representation</a>
+                                <a href="{% url 'ucc-services-building' %}">Building Condition Reports</a>
+                                <a href="{% url 'ucc-services-litigation' %}">Litigation Support</a>
+                            </div>
+                            <a class='overlay-link' href="{% url 'ucc-projects' %}">Projects</a>
+                            <a class='overlay-link' href='{% url "ucc-testimonials" %}'>Testimonials</a>
+                            <a class='overlay-link' href='{% url "ucc-contact" %}'>Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>     
+    </div>
+    {% block image %}     
+    {% endblock image %}
+    <div class="wrapper">
+        {% block content %}
+        <div class="row1">                     
+        </div>
+        {% endblock content %}
+        {% block content2 %}
+        <div class="row2">            
+        </div>
+        {% endblock content2 %}
+        <div class="row3">
+            <div class="pics-selector">
+                <img id='img1' onclick="displayImage('#img1')" src="{% static 'photos/image002.png' %}" alt="UAMS">
+                <img id='img2' onclick="displayImage('#img2')" src="{% static 'photos/image006.jpg' %}" alt="UAMS">
+                <img id='img3' onclick="displayImage('#img3')" src="{% static 'photos/image007.jpg' %}" alt="UAMS">
+                <img id='img4' onclick="displayImage('#img4')" src="{% static 'photos/image008.jpg' %}" alt="Conway Corp">                
+            </div>
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id='img01'>
+                <div id='caption'></div>
+            </div>
+            <div class='heading'>
+                <h1>Contact Us</h1>
+            </div>
+            <form id='email-form' acion="{% url 'contact-thank-you' %}" method="POST">
+                <div class='container1'>
+                    <div class="sub-container1">
+                        <input type='text' class='form-control' id='first_name' placeholder="First Name"
+                        name='first_name' required>                                               
+                    </div>
+                    <div class='sub-container2'>                       
+                        <input type='text' class='form-control' id='last_name' placeholder="Last Name"
+                        name='last_name' required>                        
+                    </div>
+                </div>
+                <div class='container2'>                    
+                    <input type='text' class='form-control' id='email_address' placeholder="Email Address"
+                    name='email_address' required>
+                </div>
+                <div class='container3'>                    
+                    <input type='text' class='form-control' id='subject' placeholder="Subject"
+                    name='subject' required>
+                </div>
+                <div class='container4'>                    
+                    <textarea type='text' class='form-control' id='message' placeholder="Message"
+                    name='message' required></textarea>
+                </div>
+                <div class='submit-button'>
+                    <a href='#'>Submit</a>
+                </div>                
+            </form>
+        </div>
+    </div> 
+    <footer>  
+        <div class="footerdiv">             
+        </div>            
+    </footer>
+
+</body>
+
+<script>
+    
+    function displayImage(id) {
+        const modal = document.querySelector('.modal');
+        const img = document.querySelector(id);        
+        const modalImg = document.querySelector('#img01');
+        const captionText = document.querySelector('#caption');
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }    
+        const span = document.getElementsByClassName('close')[0];
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+    }
+
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%"
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%"
+    }
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    <title>UCC - Building Con Rep</title>    
+    <link rel="stylesheet" href="{% static 'services/css/styles2.css' %}" type"text/css">    
+    {% endblock header %}
+</head>
+<body>
+    {% block image %}
+    <div class="new-image-wrapper">          
+        <h1 class="greeting">Building Condition Reports</h1>
+    </div>     
+    {% endblock image %}    
+    {% block content %}
+    {% endblock content %}
+    {% block content2 %} 
+    <div class="bodywrapper">
+        <p class="ptag">In order to assist prospective buyers in determining overall building conditions, we offer inspection services utilizing all necessary engineering expertise to determine:</p>
+        <ul class="ullist1">
+            <li class="ullist1-item">Site condition and integrity.</li>
+            <li class="ullist1-item">Footings/Foundation conditions.</li>
+            <li class="ullist1-item">Infrastructure condition and integrity.</li>
+            <li class="ullist1-item">Exterior finishes, including roof assembly and flashing.</li>
+            <li class="ullist1-item">Interior finishes.</li>
+            <li class="ullist1-item">Heating, ventilation and air conditioning.</li>
+            <li class="ullist1-item">Plumbing.</li>
+            <li class="ullist1-item">Fire Protection.</li>
+            <li class="ullist1-item">Electrical.</li>
+            <li class="ullist1-item">Americans with Disabilities Act (ADA).</li>
+            <li class="ullist1-item">Local code compliance issues.</li>
+            <li class="ullist1-item">Environmental studies.</li>
+        </ul>
+        <p class="ptag1">Depending on the client’s needs, our findings are reduced to descriptive reports and include building type and construction, observed issues, correction or repairs recommendations, and projected costs.</p>
+    </div>    
+    {% endblock content2 %}
+</body>
+</html>
